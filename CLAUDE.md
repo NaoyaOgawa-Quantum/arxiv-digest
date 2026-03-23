@@ -6,8 +6,7 @@ arXiv 新着論文の AI スコアリング＋自動配信システム。GitHub 
 
 - パス: `~/Claude/arxiv-digest/`
 - ブランチ: `main`
-- リモート: `odakin/arxiv-digest` (public)
-- 開発者（odakin）自身もこのリポで日常運用
+- リモート: `NaoyaOgawa-Quantum/arxiv-digest` (public)
 
 ## 実行モード
 
@@ -15,9 +14,6 @@ arXiv 新着論文の AI スコアリング＋自動配信システム。GitHub 
 |--------|------------|--------|
 | **A: GitHub Actions** | `src/scorer.py` → Anthropic API | ~$0.01/日 |
 | **B: ローカル Claude Code** | scheduled task が直接スコアリング | 無料（Pro Max） |
-
-**odakin 自身はモード B で運用。モード A はテンプレート利用者向け。**
-**odakin の配信先: Mastodon（Vivaldi Social: `social.vivaldi.net`、bot アカウント `@odakinarxiv`、メンション先 `@odakin`）**
 
 共通パイプライン: `src.fetch → [スコアリング] → src.post → チャンネル配信`
 
@@ -42,9 +38,8 @@ arXiv 新着論文の AI スコアリング＋自動配信システム。GitHub 
 - コード・コメント: 英語、ユーザーとのやりとり: 日本語
 - チャンネル追加は `src/channels/base.py` の Channel クラスを継承
 - トークン類は環境変数で管理（config.yaml に書かない）。`.env` ファイル（リポルート）からの自動読み込みに対応（`src/config.py` の `load_dotenv()`）。shell 環境変数が `.env` より優先される
-- **Mastodon 文字数制限**: インスタンス API から自動取得（`_fetch_instance_char_limit()`）。Vivaldi Social は 1337 文字。URL は常に保護し、文字数超過時は reason → summary の順に切り詰め
+- **Mastodon 文字数制限**: インスタンス API から自動取得（`_fetch_instance_char_limit()`）。URL は常に保護し、文字数超過時は reason → summary の順に切り詰め
 - **reason/summary 文字数**: スコアラー（Mode A: `scorer.py`、Mode B: `skill/SKILL.md`）で各最大 120 文字を指示。合計 240 文字以内
-- **Mastodon トークン更新手順**: Vivaldi Social は同一ブラウザで1アカウントのみログイン可。odakinarxiv のトークンを操作する場合は、まず odakin をログアウト → odakinarxiv でログイン → `設定 > 開発 > アプリ` でトークン確認/再生成 → 完了後 odakin に戻る
 
 ## 将来の拡張（検討中）
 

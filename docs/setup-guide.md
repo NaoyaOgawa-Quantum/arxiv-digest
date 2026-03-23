@@ -6,7 +6,7 @@ A step-by-step guide to get arxiv-digest running. Choose Mode A (GitHub Actions)
 
 ### Step 1: Create Your Repository
 
-1. Go to [odakin/arxiv-digest](https://github.com/odakin/arxiv-digest) on GitHub
+1. Go to [NaoyaOgawa-Quantum/arxiv-digest](https://github.com/NaoyaOgawa-Quantum/arxiv-digest) on GitHub
 2. Click **"Use this template"** > **"Create a new repository"**
 3. Choose **Private** if you want to keep your scoring profile hidden (recommended)
 4. Name it whatever you like (e.g. `my-arxiv-digest`)
@@ -301,7 +301,7 @@ arxiv-digest を動かすためのステップバイステップガイドです�
 
 ### ステップ 1: リポジトリを作成
 
-1. GitHub で [odakin/arxiv-digest](https://github.com/odakin/arxiv-digest) にアクセス
+1. GitHub で [NaoyaOgawa-Quantum/arxiv-digest](https://github.com/NaoyaOgawa-Quantum/arxiv-digest) にアクセス
 2. **「Use this template」** > **「Create a new repository」** をクリック
 3. スコアリング設定を非公開にしたい場合は **Private** を選択（推奨）
 4. 名前は自由に（例: `my-arxiv-digest`）

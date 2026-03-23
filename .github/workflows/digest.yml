@@ -21,7 +21,7 @@ jobs:
       - name: Run digest
         # Template users: remove --profile flag to use profiles/default/,
         # or set --profile <yourname> for a named profile.
-        run: python3 -m src.main --profile odakin
+        run: python3 -m src.main --profile default
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
